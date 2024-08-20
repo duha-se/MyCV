@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CV</title>
+    <link rel="icon" href="./img/cv.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./firstAssignment.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/743c51b2df.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </head>
+  <body>
+    <div class="secound-div">
+      <div>
+        <img src="./img/Designer.jpg" alt="my img" class="styled-img" />
+      </div>
+      <div class="styled-div">
+        <div>
+          <h2>Education:</h2>
+
+          <p>
+            B.sc in Software Engineering,Azrieli College of Engineering
+            Jerusalem
+          </p>
+          <p>
+            Courses: Data structure, DBs, Object-Oriented Design, Computer
+            Communication, OS, Software Test, Distributed systems & Software
+            projects management (Agile).
+          </p>
+        </div>
+        <div>
+          <h2>Languages:</h2>
+          <p>Arabic-Native| Hebrew-Fluent| English- Fluent</p>
+        </div>
+        <div>
+          <h2>Training and Certificates</h2>
+          <ul>
+            <li>
+              <u>2022:</u> Microservices JAVA FULLSTACK Development Course.
+            </li>
+            <li><u>2021:</u> FULLSTACK Course at John Bryce.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Volunteering Activities:</h2>
+
+          <ul>
+            <li>
+              <u>2017-2020:</u> Tutor at 'Perach' Program- Provided academic
+              support to six grade students
+            </li>
+            <li>
+              <u>2017-2019:</u> Applicant Guide at Azrieli College- Guided
+              prospective students on academic programs and the engineering
+              department.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="first-div">
+      <div>
+        <h1>Duha Kiswani CV</h1>
+
+        <div class="contact-details">
+          <span>
+            <i class="fa-solid fa-mobile-screen" style="color: #000000"></i>
+            <a href="tel:0549551628" target="_blank">0549551628</a> |
+            <i class="fa-brands fa-linkedin" style="color: #000000"> </i>
+            <a href="http://linkedin.com/in/duhaki" target="_blank">LinkedIn</a>
+            |
+            <i class="fa-brands fa-github" style="color: #000000"></i>
+            <a href="https://github.com/duha-se" target="_blank">GitHub</a> |
+            <i class="fa-regular fa-envelope" style="color: #000000"></i>
+            <a href="mailto:712duha@gmail.com" target="_blank"
+              >Send Mail to Me</a
+            >
+          </span>
+        </div>
+        <div>
+          <h2>Summary</h2>
+          <ul>
+            <li>
+              <p>
+                Junior Full Stack developer have B.Sc. degree in Software
+                Engineering, looking for my next challenge in the high-tech
+                industry.
+              </p>
+            </li>
+            <li>
+              <p>
+                Deep knowledge and high skilled: Java, C, React, NestJS, Node.js
+                and Algorithms.
+              </p>
+            </li>
+            <li>
+              <p>
+                Fast learning and detail-oriented with strong problem-solving
+                and teamwork abilities.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h2>Professional Experience:</h2>
+          <dl>
+            <dt>
+              <u> 2023- 2024:</u> Full Stack Developer at Hilma Tech for Impact
+              (Internship position).
+            </dt>
+            <dd>
+              <u>Key role:</u> Architected and developed robust web applications
+              from conception to deployment, leveraging React for frontend and
+              Node.js for backend development. Implemented complex features such
+              as RESTful APIs, database integration, user authentication, data
+              visualization, ensuring optimal performance and user experience.
+              Collaborated closely with design and UX teams to translate designs
+              into functional code. Troubleshooted and resolved technical
+              issues, Proficient in utilizing version control systems (GitHub)
+              and agile development methodologies, JavaScript, TypeScript,
+              React, Node.js (Express), NestJS, SQL and MongoDB.
+            </dd>
+          </dl>
+        </div>
+      </div>
+
+      <button id="open-popup-btn">Contact Me</button>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <h2>Contact Me</h2>
+
+          <form action="#" method="post">
+            <div class="row">
+              <div class="column">
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="column">
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="column">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="column">
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                  <option value="">Select Country</option>
+                  <option value="ps">Palestine</option>
+                  <option value="sp">Spain</option>
+                  <option value="lb">Lebanon</option>
+                  <option value="sw">Switzerland</option>
+                  <option value="ho">Holland</option>
+                </select>
+              </div>
+              <div class="column">
+                <label for="hours">Available Hours:</label>
+                <div class="time-inputs">
+                  <input
+                    type="time"
+                    id="hours-start"
+                    name="hours-start"
+                    required
+                  />
+                  <span>-</span>
+                  <input type="time" id="hours-end" name="hours-end" required />
+                </div>
+              </div>
+            </div>
+
+            <label for="message">Write a note or message for me:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <div class="buttons">
+              <input type="submit" value="Submit" />
+              <button type="button" id="cancel-btn">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <script>
+        // JavaScript to handle popup open/close
+        document
+          .getElementById("open-popup-btn")
+          .addEventListener("click", function () {
+            document.getElementById("popup").style.display = "block";
+          });
+
+        document
+          .getElementById("cancel-btn")
+          .addEventListener("click", function () {
+            document.getElementById("popup").style.display = "none";
+          });
+      </script>
+    </div>
+  </body>
+</html>
