@@ -3,108 +3,34 @@ body {
   height: 100vh;
   flex-direction: column;
   font-family: Arial, sans-serif;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
 }
+
 .dark-mode {
   background-color: black;
   color: white;
 }
-.dark-button {
-  position: relative;
-  top: 3rem;
-}
+
 .dark-mode .first-div {
-  position: absolute;
   background-color: black;
-  width: 70vw;
-  height: 106vh;
   color: white;
-  /* right: 1vw; */
-}
-.light-mode {
-  background-color: white;
-  color: black;
-}
-.styled-img {
-  border-radius: 50%;
-  position: absolute;
-  right: 7vw;
-  width: 100px;
-  height: 100px;
 }
 
-.first-div {
-  position: absolute;
-  background-color: white;
-  width: 70vw;
-  height: 106vh;
-  /* right: 1vw; */
-}
-.styled-div {
-  top: 10vh;
-  position: absolute;
-  left: 2vw;
-}
-.secound-div {
-  position: absolute;
-  flex: 1;
-  background-color: #b1cbb2;
-  width: 28vw;
-  height: 140vh;
-  right: 0;
-  top: 0;
+.dark-mode .secound-div {
+  background-color: #333;
 }
 
-.contact-details {
-  text-align: center;
+.dark-mode h2 {
+  border-bottom: 2px solid white;
 }
 
-h1 {
-  text-align: center;
-}
-
-h2 {
-  border-bottom: 2px solid black;
-}
-
-.popup-div {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section {
-  display: block;
-}
-.hide-section {
-  display: none;
-}
-.toggle-button {
-  background-color: #4c6a4d;
-  width: 2rem;
-  height: 1rem;
-}
-.toggle-div {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-#open-popup-btn {
-  padding: 10px 20px;
-  background-color: #4c6a4d;
+.dark-mode #open-popup-btn {
+  background-color: #666;
   color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin: 20px;
 }
-
-#open-popup-btn:hover {
-  background-color: #b1cbb2;
-}
-
-.popup {
+.dark-mode .popup {
   display: none;
   position: fixed;
   top: 6rem;
@@ -117,7 +43,102 @@ h2 {
   z-index: 9999;
 }
 
-.popup-content {
+.dark-mode .popup-content {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+a {
+  color: rgb(105, 138, 105);
+}
+.light-mode {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .first-div {
+  background-color: white;
+  color: black;
+}
+
+.light-mode .secound-div {
+  background-color: #b1cbb2;
+}
+
+.light-mode h2 {
+  border-bottom: 2px solid black;
+}
+
+.light-mode #open-popup-btn {
+  background-color: #4c6a4d;
+  color: white;
+}
+
+.toggle-button {
+  background-color: #4c6a4d;
+  width: 2rem;
+  height: 1rem;
+}
+
+.toggle-div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.styled-img {
+  border-radius: 50%;
+  position: absolute;
+  right: 7vw;
+  width: 100px;
+  height: 100px;
+}
+
+.first-div {
+  position: absolute;
+  width: 70vw;
+  height: 106vh;
+  background-color: white;
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.styled-div {
+  top: 10vh;
+  position: absolute;
+  left: 2vw;
+}
+
+.secound-div {
+  position: absolute;
+  flex: 1;
+  background-color: #b1cbb2;
+  width: 28vw;
+  height: 140vh;
+  right: 0;
+  top: 0;
+  transition: background-color 0.3s;
+}
+
+.light-mode .popup {
+  display: none;
+  position: fixed;
+  top: 6rem;
+  left: 10rem;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.light-mode .popup-content {
   background-color: white;
   padding: 20px;
   border-radius: 8px;
@@ -167,11 +188,6 @@ select {
   align-items: center;
   justify-content: space-between;
 }
-input[type="time"]::selection,
-::-moz-selection {
-  background: #c28e4a !important;
-  color: white;
-}
 
 .time-inputs input[type="time"] {
   width: 45%;
@@ -215,4 +231,12 @@ textarea {
 
 .buttons #cancel-btn:hover {
   background-color: #999;
+}
+
+.section {
+  display: block;
+}
+
+.hide-section {
+  display: none;
 }
