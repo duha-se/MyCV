@@ -18,17 +18,20 @@
     ></script>
     <script src="main.js"></script>
   </head>
-  <body>
+  <body id="theme" class="light-mode">
+    <div >
+      <button  onclick="changeTheme()">Dark Mode</button>
     <div class="secound-div">
       <div>
         <img src="./img/Designer.jpg" alt="my img" class="styled-img" />
       </div>
       <div class="styled-div">
         <div>
+        
           <h2>Education:</h2>
 
           <p>
-            B.sc in Software Engineering,Azrieli College of Engineering
+            B.sc in Software Engineering, Azrieli College of Engineering,
             Jerusalem
           </p>
           <p>
@@ -39,7 +42,7 @@
         </div>
         <div>
           <h2>Languages:</h2>
-          <p>Arabic-Native| Hebrew-Fluent| English- Fluent</p>
+          <p>Arabic-Native | Hebrew-Fluent | English- Fluent</p>
         </div>
         <div>
           <h2>Training and Certificates</h2>
@@ -86,7 +89,7 @@
             >
           </span>
         </div>
-        <div>
+        <div onmouseover="hover(this)" onmouseout="unhover(this)">
           <h2>Summary</h2>
           <ul>
             <li>
@@ -111,31 +114,39 @@
           </ul>
         </div>
         <div>
-          <h2>Professional Experience:</h2>
-          <dl>
-            <dt>
-              <u> 2023- 2024:</u> Full Stack Developer at Hilma Tech for Impact
-              (Internship position).
-            </dt>
-            <dd>
-              <u>Key role:</u> Architected and developed robust web applications
-              from conception to deployment, leveraging React for frontend and
-              Node.js for backend development. Implemented complex features such
-              as RESTful APIs, database integration, user authentication, data
-              visualization, ensuring optimal performance and user experience.
-              Collaborated closely with design and UX teams to translate designs
-              into functional code. Troubleshooted and resolved technical
-              issues, Proficient in utilizing version control systems (GitHub)
-              and agile development methodologies, JavaScript, TypeScript,
-              React, Node.js (Express), NestJS, SQL and MongoDB.
-            </dd>
-          </dl>
+          <div class="toggle-div">
+            <button class="toggle-button" onclick="toggle()">^</button>
+            <h2>Professional Experience:</h2>
+          </div>
+          <div class="section" id="toggleDiv">
+            <dl>
+              <dt>
+                <u> 2023-2024:</u> Full Stack Developer at Hilma Tech for Impact
+                (Internship position).
+              </dt>
+              <dd>
+                <u>Key role:</u> Architected and developed robust web
+                applications from conception to deployment, leveraging React for
+                frontend and Node.js for backend development. Implemented
+                complex features such as RESTful APIs, database integration,
+                user authentication, data visualization, ensuring optimal
+                performance and user experience. Collaborated closely with
+                design and UX teams to translate designs into functional code.
+                Troubleshooted and resolved technical issues, Proficient in
+                utilizing version control systems (GitHub) and agile development
+                methodologies, JavaScript, TypeScript, React, Node.js (Express),
+                NestJS, SQL and MongoDB.
+              </dd>
+            </dl>
+          </div>
         </div>
       </div>
 
-      <button id="open-popup-btn">Contact Me</button>
+      <!-- Contact Me Button -->
+      <button id="open-popup-btn" onclick="openPopup()">Contact Me</button>
 
-      <div id="popup" class="popup">
+      <!-- Popup Section -->
+      <div id="popup" class="popup" style="display: none;">
         <div class="popup-content">
           <h2>Contact Me</h2>
 
@@ -194,26 +205,50 @@
 
             <div class="buttons">
               <input type="submit" value="Submit" />
-              <button type="button" id="cancel-btn">Cancel</button>
+            
+              <button type="button" onclick="closePopup()">Cancel</button>
             </div>
           </form>
         </div>
       </div>
 
       <script>
-        // JavaScript to handle popup open/close
-        document
-          .getElementById("open-popup-btn")
-          .addEventListener("click", function () {
-            document.getElementById("popup").style.display = "block";
-          });
+       function changeTheme(){
+        const element = document.getElementById("theme");
+          if (element.className == "light-mode") {
+            element.className = "dark-mode";
+          } else {
+            element.className = "light-mode";
+          }
+       }
+        function openPopup() {
+          document.getElementById("popup").style.display = "block";
+        }
 
-        document
-          .getElementById("cancel-btn")
-          .addEventListener("click", function () {
-            document.getElementById("popup").style.display = "none";
-          });
+        
+        function closePopup() {
+          document.getElementById("popup").style.display = "none";
+        }
+
+        function hover(x) {
+          x.style.backgroundColor = "#b1cbb2";
+        }
+
+        function unhover(x) {
+          x.style.backgroundColor = "";
+        }
+
+        function toggle() {
+          const element = document.getElementById("toggleDiv");
+          if (element.className == "section") {
+            element.className = "hide-section";
+          } else {
+            element.className = "section";
+          }
+        }
       </script>
     </div>
+  </div>
   </body>
 </html>
+
